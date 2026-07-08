@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.headerdiv {
+    background-image: url(../img/flota1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.menu-icon.active .linea:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+    background-color: white;
+}
+.menu-icon.active .linea:nth-child(2) {
+    opacity: 0;
+}
+.menu-icon.active .linea:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+    background-color: white;
+}
+
+.mover_ul {
+    animation: movSubMenu .5s ease-out forwards;
+}
+
+@keyframes movSubMenu {
+    0% { right: -100%; }
+    100% { right: 0%; }
+}
+
+.mover_ul2 {
+    animation: mover_uls2 .5s ease-in forwards;
+}
+
+@keyframes mover_uls2 {
+    0% { right: 0%; }
+    100% { right: -100%; }
+}
+
+
+#flashlight {
+  position: fixed; /* Fijo para que cubra todo al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Obligatorio: permite clicks debajo */
+  z-index: 9999; /* Por encima de todo */
+  
+  /* Gradiente suave */
+  background: radial-gradient(
+    circle 300px at var(--x, 50%) var(--y, 50%), 
+    rgba(3, 101, 240, 0.08) 0%, 
+    transparent 50%
+  );
+}
