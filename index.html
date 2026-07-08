@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Galax GPS | Rastreo Satelital</title>
+
+    <link rel="icon" href="img/logox.png">
+
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="h-[100vh] w-[100%] overflow-hidden">
+        <div id="flashlight" class="pointer-events-none absolute inset-0 z-50"></div>
+        <div class="headerdiv w-[100%] h-[100%] ">
+            <div class=" w-[100%] h-[100%] bg-black/50 backdrop-blur-sm flex justify-between p-5 lg:pt-10 relative">
+                <a class="z-100 h-[30px]" href="#">
+                    <img class="w-[120px] lg:w-[140px] h-[30px] lg:h-[40px] lg:pl-4" src="img/logogalax.png" alt="">
+                </a>
+                <div class=" absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
+                    <h1 class="text-white text-4xl lg:text-6xl font-bold mb-6">
+                        PROTEGE TU <span class="text-[#00a1f1]">INVERSIÓN</span> CON  <span id="typed-text" class="relative inline-block before:absolute before:inset-0 before:-z-10 before:bg-[#00A1F1] before:[clip-path:polygon(10%_0%,_100%_0%,_90%_100%,_0%_100%)] lg:before:block">NOSOTROS</span>
+                    </h1>
+                    <p class="text-white text-lg mb-8 max-w-md">
+                        Sistema de rastreo <span class="text-[#00a1f1]">satelital</span>.
+                    </p>
+                    <div class="flex flex-col items-center lg:flex-row gap-4">
+                        <a href="#" class="hover:scale-105 transition-transform">
+                            <img class="w-[200px]" src="img/playstore.png" class="w-6" alt="Play Store">
+                        </a>
+                        <a href="#" class="hover:scale-105 transition-transform">
+                            <img class="w-[185px]" src="img/appstore.svg" class="w-6" alt="Play Store">
+                        </a>
+                    </div>
+                    <a target="_blank" class="bg-[#00a1f1] text-white border-2 border-transparent duration-500 overflow-hidden group font-bold p-3 mt-5 rounded-md hover:scale-110 hover:bg-[#0b82bd] transition-[0.5s] text-sm" href="https://ingresar.galaxgpsvzla.com/ui/map/objects/list">
+                        INGRESAR A LA PLATAFORMA
+                    </a>
+                </div>
+                <div id="btn_subMenu" class="z-200 menu-icon fixed right-6 top-6 w-[30px] h-[25px] flex flex-col justify-between cursor-pointer lg:hidden z-60">
+                    <div class="linea w-full h-[3px] bg-[#fff] transition-[0.4s] rounded-sm"></div>
+                    <div class="linea w-full h-[3px] bg-[#fff] transition-[0.4s] rounded-sm"></div>
+                    <div class="linea w-full h-[3px] bg-[#fff] transition-[0.4s] rounded-sm"></div>
+                </div>
+                <nav class="">
+                    <ul id="subMenu" class="z-100 before:absolute before:inset-0 before:-z-10 before:bg-[#00A1F1] before:[clip-path:polygon(10%_0%,_100%_0%,_90%_100%,_0%_100%)] lg:before:block text-white flex flex-col lg:flex-row w-[100%] lg:w-auto h-[100vh] lg:h-auto items-center justify-center fixed lg:relative top-0 right-[-100%] lg:right-0 bg-[#00A1F1] lg:bg-transparent">
+                        <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#">Inicio</a></li>
+                        <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#">Servicios</a></li>
+                        <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="w-[100%] h-auto p-10 ">
+        <div class="container flex flex-col gap-3 justify-center items-center text-center top-0">
+            <h2 class="text-3xl lg:text-5xl">¿<span class="text-[#00a1f1]">Como</span>  funciona nuestra <span class="text-[#00a1f1]">plataforma</span>?</h2>
+            <p class="text-1xl lg:text-2xl md:pl-5 md:pr-5 lg:pl-50 lg:pr-50 mb-5">Permite ubicar sobre el plano Geográfico de Venezuela, la posición en tiempo real de toda la Flota de Vehículos de su Empresa o Grupo en particular, a través de nuestra Plataforma Digital.</p>
+            <div class="flex flex-col justify-center items-center lg:flex-row gap-6">
+                <div class=" overflow-hidden">
+                    <img class="w-[500px] transition-[0.5s] hover:scale-110" src="img/plat1.png" alt="">
+                </div>
+                <div class="overflow-hidden">
+                    <img class="w-[500px] transition-[0.5s] hover:scale-110" src="img/plat2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="h-auto flex">
+        <h2>Nuestros Beneficios</h2>
+        <div class="beneficios">
+            <article class="card">
+                <h3>Monitoreo 24/7</h3>
+                <p>Acceso total a la ubicación de tus activos desde cualquier lugar.</p>
+            </article>
+            <article class="card">
+                <h3>Control de Motor</h3>
+                <p>Apagado y encendido remoto para mayor seguridad.</p>
+            </article>
+            <article class="card">
+                <h3>Geocercas</h3>
+                <p>Recibe alertas al salir de perímetros predefinidos.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Galax GPS - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#typed-text', {
+        strings: ['NOSOTROS', 'SEGURIDAD', 'CONFIANZA'], // Puedes poner varias palabras si quieres
+        typeSpeed: 50,      // Velocidad al escribir
+        backSpeed: 50,       // Velocidad al borrar
+        loop: true,          // Repetir infinitamente
+        showCursor: true,    // Mostrar el cursor "|"
+        cursorChar: '|',
+        backDelay: 1000,      // <--- PAUSA AQUÍ: 3 segundos (3000ms) de lectura
+        startDelay: 1000,
+    });
+    </script>
+</body>
+</html>
