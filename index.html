@@ -16,19 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="h-[100vh] w-[100%] overflow-hidden">
+    <header id="inicio" class="h-[100vh] w-[100%] overflow-hidden">
         <div id="flashlight" class="pointer-events-none absolute inset-0 z-50"></div>
         <div class="headerdiv w-[100%] h-[100%] ">
             <div class=" w-[100%] h-[100%] bg-black/50 backdrop-blur-sm flex justify-between p-5 lg:pt-10 relative">
-                <a class="z-100 h-[30px]" href="#">
-                    <img class="w-[120px] lg:w-[140px] h-[30px] lg:h-[40px] lg:pl-4" src="img/logogalax.png" alt="">
+                <a class="z-100 relative h-[30px] before:absolute before:inset-0 before:-z-10 before:w-[300px] before:-left-15 before:h-[12vh] before:-top-10 before:bg-[#fff] before:[clip-path:polygon(10%_0%,_100%_0%,_90%_100%,_0%_100%)]" href="#">
+                    <img class="w-[120px] transition-[0.4s] hover:scale-110 lg:w-[140px] h-[30px] lg:h-[40px] lg:pl-4" src="img/logogalax.png" alt="">
                 </a>
                 <div class=" absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
                     <h1 class="text-white text-4xl lg:text-6xl font-bold mb-6">
-                        PROTEGE TU <span class="text-[#00a1f1]">INVERSIÓN</span> CON  <span id="typed-text" class="relative inline-block before:absolute before:inset-0 before:-z-10 before:bg-[#00A1F1] before:[clip-path:polygon(10%_0%,_100%_0%,_90%_100%,_0%_100%)] lg:before:block">NOSOTROS</span>
+                        PROTEGE TU <span class="text-[#00a1f1]">INVERSIÓN</span> CON  <span id="typed-text" class="relative inline-block before:absolute before:inset-0 before:-z-10 before:bg-[#00A1F1] before:[clip-path:polygon(10%_0%,_100%_0%,_90%_100%,_0%_100%)] lg:before:block"></span>
                     </h1>
                     <p class="text-white text-lg mb-8 max-w-md">
-                        Sistema de rastreo <span class="text-[#00a1f1]">satelital</span>.
+                        Sistema de rastreo <span class="text-[#00a1f1] font-bold">satelital</span>.
                     </p>
                     <div class="flex flex-col items-center lg:flex-row gap-4">
                         <a href="#" class="hover:scale-105 transition-transform">
@@ -51,56 +51,179 @@
         </div>
         <nav class="">
             <ul id="subMenu" class="fixed z-100 before:absolute before:inset-0 before:-z-10 before:bg-[#00A1F1] before:[clip-path:polygon(10%_0%,_100%_0%,_90%_100%,_0%_100%)] lg:before:block text-white flex flex-col lg:flex-row w-[100%] lg:w-auto h-[100vh] lg:h-auto items-center justify-center  lg:top-10 lg:right-10 top-0 right-[-100%] lg:right-0 bg-[#00A1F1] lg:bg-transparent">
-                <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#">Inicio</a></li>
-                <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#">Servicios</a></li>
-                <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#">Contacto</a></li>
+                <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#inicio">Inicio</a></li>
+                <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#servicios">Servicios</a></li>
+                <li><a class="p-3 block text-xl font-bold transition-[0.3s] hover:scale-110" href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <section class="w-[100%] h-auto p-10 ">
+    <section id="app" class="w-[100%] h-auto p-10 ">
         <div class="container flex flex-col gap-3 justify-center items-center text-center top-0">
-            <h2 class="text-3xl lg:text-5xl">¿<span class="text-[#00a1f1]">Como</span>  funciona nuestra <span class="text-[#00a1f1]">plataforma</span>?</h2>
-            <p class="text-1xl lg:text-2xl md:pl-5 md:pr-5 lg:pl-50 lg:pr-50 mb-5">Permite ubicar sobre el plano Geográfico de Venezuela, la posición en tiempo real de toda la Flota de Vehículos de su Empresa o Grupo en particular, a través de nuestra Plataforma Digital.</p>
-            <div class="flex flex-col justify-center items-center lg:flex-row gap-6">
-                <div class=" overflow-hidden">
+            <div class="contenedor-maquina" id="seccion-texto">
+                <h2 id="texto-maquina-titulo" class="text-3xl lg:text-5xl pb-5">¿<span class="text-[#00a1f1]"></span>  <span class="text-[#00a1f1]"></span>?</h2>
+                <p id="texto-maquina-desc" class="text-1xl lg:text-2xl md:pl-5 md:pr-5 lg:pl-50 lg:pr-50 mb-5"></p>
+            </div>
+            <div class="flex flex-col justify-center items-center lg:flex-row gap-6 overflow-hidden">
+                <div class="animar-img from-left overflow-hidden">
                     <img class="w-[500px] transition-[0.5s] hover:scale-110" src="img/plat1.png" alt="">
                 </div>
-                <div class="overflow-hidden">
+                <div class="animar-img from-right overflow-hidden">
                     <img class="w-[500px] transition-[0.5s] hover:scale-110" src="img/plat2.png" alt="">
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="h-auto flex">
-        <h2>Nuestros Beneficios</h2>
-        <div class="beneficios">
-            <article class="card">
-                <h3>Monitoreo 24/7</h3>
-                <p>Acceso total a la ubicación de tus activos desde cualquier lugar.</p>
+    <section id="servicios" class="relative h-auto flex flex-col lg:flex-row justify-center items-center bg-[#00a1f1] p-5">
+        <div class="lg:w-1/2 absolute z-10 -top-0 w-full left-0 h-[100%] imgBen"></div>
+        <div id="seccion-beneficios" class="z-50 text-center w-auto w-full lg:w-1/2 fade-element">
+            <h2 class="text-3xl lg:text-4xl font-bold text-[#00a1f1] p-3">Nuestros Beneficios</h2>
+            <p class="text-center text-[white] font-bold p-5 md:text-1xl md:pl-40 md:pr-40 lg:text-2xl">
+                Nuestra moderna plataforma te brinda una gama de funciones que podrás utilizar de una manera fácil y sencilla, ingresando desde una PC o un dispositivo móvil descargando nuestra
+            </p>
+        </div>
+        <div id="contenedor-beneficios" class="z-50 flex flex-col w-full lg:w-1/2 lg:pl-15 text-1xl justify-center items-start text-white font-bold gap-10">
+            <article class="flex justify-center items-center gap-3">
+                <svg class="bg-[#285dad] rounded-full h-[50px] p-2 w-[50px]" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.875 5.827a3 3 0 1 0 6 0a3 3 0 0 0-6 0M9.125 21.75a2.087 2.087 0 0 0 4.005 0M11.125 3V.75m7.523 11.211c.189 5.756 1.477 6.789 1.477 6.789h-18s1.5-1.916 1.5-8.25a7.507 7.507 0 0 1 9.724-7.165"/></svg>            
+                <h3 class="maquina-texto">Notificación de Desconxión de batería</h3>
             </article>
-            <article class="card">
-                <h3>Control de Motor</h3>
-                <p>Apagado y encendido remoto para mayor seguridad.</p>
+            <article class="flex justify-center items-center gap-3">
+                <svg class="bg-[#285dad] rounded-full h-[50px] p-2 w-[50px]" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10s10-4.486 10-10S17.514 2 12 2M4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2l1 1v1.931C7.061 19.436 4 16.072 4 12m14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.95 7.95 0 0 1-1.67 4.873"/></svg>                
+                <h3 class="maquina-texto">Geocercas</h3>
             </article>
-            <article class="card">
-                <h3>Geocercas</h3>
-                <p>Recibe alertas al salir de perímetros predefinidos.</p>
+            <article class="flex justify-center items-center gap-3">
+                <svg class="bg-[#285dad] rounded-full h-[50px] p-2 w-[50px]" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="#ffffff" d="M3.433 17.325L3.079 19.8a1 1 0 0 0 1.131 1.131l2.475-.354C7.06 20.524 8 18 8 18s.472.405.665.466c.412.13.813-.274.948-.684L10 16.01s.577.292.786.335c.266.055.524-.109.707-.293a1 1 0 0 0 .241-.391L12 14.01s.675.187.906.214c.263.03.519-.104.707-.293l1.138-1.137a5.5 5.5 0 0 0 5.581-1.338a5.507 5.507 0 0 0 0-7.778a5.507 5.507 0 0 0-7.778 0a5.5 5.5 0 0 0-1.338 5.581l-7.501 7.5a1 1 0 0 0-.282.566M18.504 5.506a2.92 2.92 0 0 1 0 4.122l-4.122-4.122a2.92 2.92 0 0 1 4.122 0"/></svg>            
+                <h3 class="maquina-texto">Apagado y encendido de motor</h3>
+            </article>
+            <article class="flex justify-center items-center gap-3">
+                <svg class="bg-[#285dad] rounded-full h-[50px] p-2 w-[50px]" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="#ffffff" d="M7 9V7h14v2zm0 4v-2h14v2zm0 4v-2h14v2zM4 9q-.425 0-.712-.288T3 8t.288-.712T4 7t.713.288T5 8t-.288.713T4 9m0 4q-.425 0-.712-.288T3 12t.288-.712T4 11t.713.288T5 12t-.288.713T4 13m0 4q-.425 0-.712-.288T3 16t.288-.712T4 15t.713.288T5 16t-.288.713T4 17"/></svg>                
+                <h3 class="maquina-texto">Reportes históricos</h3>
+            </article>
+            <article class="flex justify-center items-center gap-3">
+                <svg class="bg-[#285dad] rounded-full h-[50px] p-2 w-[50px]"" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><g fill="none"><path d="M10 19h13v-5l-.4-1H10.4l-.4 1z"/><path stroke="#ffffff" stroke-linecap="square" stroke-width="2" d="M23 19H10m13 0v-5l-2-5h-9l-2.05 4.975L10 19m13 0v1.5M10 19v1.5M21.85 13h-10.7M20 16.004h.004V16H20zm-7 0h.004V16H13zM1 13v5a1 1 0 0 0 1 1h5m-6-6V5a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1M1 13h6m-2.5 6.5l-1 1m.5-4.496h.004V16H4z"/></g></svg>                
+                <h3 class="maquina-texto">Seguimiento ruta tiempo real</h3>
+            </article>
+            <article class="flex justify-center items-center gap-3">
+                <svg class="bg-[#285dad] rounded-full h-[50px] p-2 w-[50px]" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 16.088q.95-.013 1.4-.688l4.225-6.325q.225-.35-.062-.637t-.638-.063L10.6 12.6q-.675.45-.712 1.375t.562 1.525t1.55.588M12 4q.9 0 1.775.15t1.7.475q.4.15.85.563t.25.787t-.9.5t-1.125-.025q-.625-.225-1.262-.337T12 6Q8.675 6 6.337 8.338T4 14q0 1.05.288 2.075T5.1 18h13.8q.575-.95.838-1.975T20 13.9q0-.65-.113-1.275T19.55 11.4q-.15-.425-.05-.825t.45-.675q.325-.25.713-.15t.537.45q.375.875.575 1.788T22 13.85q.025 1.425-.325 2.725T20.65 19.05q-.275.45-.75.7t-1 .25H5.1q-.525 0-1-.25t-.75-.7q-.65-1.125-1-2.387T2 14q0-2.075.788-3.887t2.15-3.175t3.187-2.15T12 4m.175 7.825"/></svg>
+                <h3 class="maquina-texto">Control de velocidad</h3>
             </article>
         </div>
+    </section>      
+    <section class="p-10 bg-[#021a25] text-white transition-[0.5s]">
+        <div class="flex mt-15 flex-col transition-[0.5s] lg:flex-row justify-center items-center gap-5">
+            <div class="w-full w-1/2 overflow-hidden flex justify-center lg:pl-40">
+                <a target="_blank" href="https://ingresar.galaxgpsvzla.com/ui/admin/clients">
+                    <img class="animar-img transition-[0.5s] from-left overflow-hidden w-1xl transition-[0.5s] hover:scale-110" src="img/app.png" alt="Servicios Galaxgps">
+                </a>
+            </div>
+            <div id="seccion-beneficios2" class="fade-element flex lg:pr-40 w-full w-1/2 flex-col justify-center gap-5 items-center text-center">
+                <h2 class="text-3xl text-center">Con <span class="text-[#00a1f1]">Galaxgps</span> vas a poder:</h2>
+                <ul class="text-1xl">
+                    <li><strong>6 Meses de Garantía</strong> en Equipo GPS.</li>
+                    <li><strong>Call Center:</strong> Horario de oficina (08:00 am - 04:00 pm).</li>
+                    <li><strong>Acompañamiento:</strong> Soporte a nivel de sistema en eventos de robo.</li>
+                    <li><strong>Servicio Técnico a Domicilio (Caracas):</strong> Consultar al momento.</li>
+                    <li><strong>Servicio Técnico Nacional:</strong> Aplicación a nivel nacional (Consultar al momento).</li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row lg:gap-30 justify-center items-center mt-20 gap-10">
+            <div class="flex overflow-hidden flex-col justify-center items-center gap-4">
+                <img class="animar-img from-left overflow-hidden transition-[0.4s] hover:scale-110" src="img/part.png" alt="">
+                <div class="text-center">
+                    <h4 class="text-2xl font-bold text-[#00a1f1]">vehículos particulares</h4>
+                    <p class="text-[#a7cfe2]">LLeva el control en tus manos.</p>
+                </div>
+            </div>
+            <div class="flex overflow-hidden flex-col justify-center items-center gap-4">
+                <img class="animar-img from-right overflow-hidden transition-[0.4s] hover:scale-110" src="img/flot.png" alt="">
+                <div class="text-center">
+                    <h4 class="text-2xl font-bold text-[#00a1f1]">Flotas vehiculares</h4>
+                    <p class="text-[#a7cfe2]">Optimiza la gestión de tu empresa.</p>
+                </div>
+            </div>
+        </div>
     </section>
+    <section class="p-5 flex flex-col justify-center items-center bg-[#f5f5f5]">
+        <div class="flex mt-5 flex-col justify-center items-center text-center">
+            <div class="flex flex-col gap-5">
+                <h2 class="text-3xl"><span class="text-[#00a1f1]">Ubicación</span> y <span class="text-[#00a1f1]">rastreo</span> en tiempo real</h2>
+            </div>
+            <div class="flex flex-col justify-center items-center text-center lg:flex-row gap-15 lg:gap-25 mt-10">
+                <div class="flex flex-col">
+                    <span class="text-5xl lg:text-8xl font-bold text-[#00a1f1] numero" data-target="8">0+</span>
+                    <span class="titulo">Años de experiencia en el Mercado</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-5xl lg:text-8xl font-bold text-[#00a1f1] numero" data-target="2500">2.500+</span>
+                    <span class="titulo">Clientes Satisfechos</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-5xl lg:text-8xl font-bold text-[#00a1f1] numero" data-target="24">24</span>
+                    <span class="titulo">Horas de Acceso al Sistema</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-5xl lg:text-8xl font-bold text-[#00a1f1] numero" data-target="15">15</span>
+                    <span class="titulo">Agentes Autorizados</span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-30 p-10 mb-10 rounded-md w-full md:w-2xl lg:w-4xl bg-[#00a1f1] text-white flex gap-5 flex-col justify-center items-center text-center">
+            <h3 class="text-3xl font-bold">Infórmate de nuestros equipos y servicios</h3>
+            <p class="font-bold">Esto incluye la instalación y domicilio gratis.</p>
+        </div>
+    </section>
+    <section id="contacto-form" class="py-16 bg-[#f5f5f5]">
+        <div class="max-w-2xl mx-auto p-8 border border-gray-200 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#04142c]">Solicitar Información</h2>
+            <form id="contactForm" class="flex flex-col gap-4">
+                <input type="text" id="nombre" placeholder="Tu Nombre" required class="p-3 border rounded-md outline-none focus:ring-2 focus:ring-[#00a1f1]">
+                <input type="email" id="email" placeholder="Tu Correo Electrónico" required class="p-3 border rounded-md outline-none focus:ring-2 focus:ring-[#00a1f1]">
+                <textarea id="mensaje" placeholder="¿En qué podemos ayudarte?" rows="4" required class="p-3 border rounded-md outline-none focus:ring-2 focus:ring-[#00a1f1]"></textarea>
+                <button type="submit" class="bg-[#00a1f1] text-white font-bold p-3 rounded-md hover:bg-[#0b82bd] transition-colors">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+    <footer id="contact" class="bg-[#04142c] text-white p-10">
+        <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 max-w-6xl mx-auto text-center md:text-left">
+            
+            <div class="footer-columna flex-1">
+                <h3 class="font-bold text-lg mb-3">GalaxGpsVzla</h3>
+                <p>&copy; 2018 - 2026</p>
+                <p>Todos los derechos reservados.</p>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 Galax GPS - Todos los derechos reservados.</p>
+            <div class="footer-columna flex-1">
+                <h3 class="font-bold text-lg mb-3">Nuestros Beneficios</h3>
+                <p class="mb-2">Nuestra plataforma permite rastreo fácil desde PC o dispositivos móviles.</p>
+                <a href="#" class="text-blue-400 hover:underline">Política de privacidad</a>
+            </div>
+
+            <div class="footer-columna flex-1">
+                <h3 class="font-bold text-lg mb-3">Contáctate</h3>
+                <p>AV. Francisco de Miranda, Centro Empresarial Don Bosco, Piso 3, Ofic. D, Boleíta Sur, Caracas.</p>
+                <p><strong>Email:</strong> Galaxgpsvzla@gmail.com</p>
+                <p><strong>Tel:</strong> +58 412-2498033</p>
+            </div>
+
+            <div class="footer-columna flex-1">
+                <h3 class="font-bold text-lg mb-3">En números</h3>
+                <ul>
+                    <li>8 años en el mercado</li>
+                    <li>2.500 clientes</li>
+                    <li>Acceso 24 horas</li>
+                </ul>
+            </div>
+        </div>
     </footer>
-
     <script src="main.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#typed-text', {
         strings: ['NOSOTROS', 'SEGURIDAD', 'CONFIANZA'], // Puedes poner varias palabras si quieres
-        typeSpeed: 50,      // Velocidad al escribir
-        backSpeed: 50,       // Velocidad al borrar
+        typeSpeed: 20,      // Velocidad al escribir
+        backSpeed: 20,       // Velocidad al borrar
         loop: true,          // Repetir infinitamente
         showCursor: true,    // Mostrar el cursor "|"
         cursorChar: '|',

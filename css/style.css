@@ -14,6 +14,15 @@
     background-attachment: fixed;
 }
 
+.imgBen {
+    background-image: url(../img/flota1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    filter: blur(5px) brightness(0.3);
+}
+
 .menu-icon.active .linea:nth-child(1) {
     transform: translateY(11px) rotate(45deg);
     background-color: white;
@@ -60,4 +69,27 @@
     rgba(3, 101, 240, 0.08) 0%, 
     transparent 50%
   );
+}
+
+
+.animar-img {
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+
+.from-left { transform: translateX(-100px); }
+.from-right { transform: translateX(100px); }
+
+.animar-img.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-element {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-element.is-visible {
+    opacity: 1;
 }
