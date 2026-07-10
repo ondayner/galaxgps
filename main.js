@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.animar-img').forEach(el => observer.observe(el));
 });
 
-//APARECER TEXTO MAQUINA DE ESCRIBIR
+// APARECER TEXTO MAQUINA DE ESCRIBIR (Ejecución única y fija)
 
 document.addEventListener("DOMContentLoaded", () => {
     let typedTitulo = null;
@@ -94,40 +94,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            // Si la sección entra en pantalla
             if (entry.isIntersecting) {
-                typedTitulo = new Typed('#texto-maquina-titulo', {
-                    strings: ['¿<span class="text-[#00a1f1]">Como</span> funciona nuestra <span class="text-[#00a1f1]">plataforma</span>?'],
-                    typeSpeed: 15,
-                    showCursor: false
-                });
-
-                typedDesc = new Typed('#texto-maquina-desc', {
-                    strings: ['Permite ubicar sobre el plano Geográfico de Venezuela, la posición en tiempo real de toda la Flota de Vehículos de su Empresa o Grupo en particular, a través de nuestra Plataforma Digital.'],
-                    typeSpeed: 5,
-                    showCursor: false,
-                    startDelay: 200 
-                });
-
-                typedDesc2 = new Typed('#texto-maquina-titulo2', {
-                    strings: ['<span class="text-[#00a1f1]">Ubicación</span> y <span class="text-[#00a1f1]">rastreo</span> en tiempo real'],
-                    typeSpeed: 5,
-                    showCursor: false,
-                    startDelay: 200 
-                });
                 
-            } else {
-                if (typedTitulo) typedTitulo.destroy();
-                if (typedDesc) typedDesc.destroy();
-                if (typedDesc2) typedDesc2.destroy();
-                document.getElementById('texto-maquina-titulo').innerHTML = '';
-                document.getElementById('texto-maquina-desc').innerHTML = '';
-                document.getElementById('texto-maquina-titulo2').innerHTML = '';
+                // ¡La clave! Dejamos de observar ESTA sección específica de inmediato
+                observer.unobserve(entry.target);
+
+                // Lógica para la primera sección
+                if (entry.target.id === 'seccion-texto') {
+                    typedTitulo = new Typed('#texto-maquina-titulo', {
+                        strings: ['¿<span class="text-[#00a1f1]">Como</span> funciona nuestra <span class="text-[#00a1f1]">plataforma</span>?'],
+                        typeSpeed: 15,
+                        showCursor: false
+                    });
+
+                    typedDesc = new Typed('#texto-maquina-desc', {
+                        strings: ['Permite ubicar sobre el plano Geográfico de Venezuela, la posición en tiempo real de toda la Flota de Vehículos de su Empresa o Grupo en particular, a través de nuestra Plataforma Digital.'],
+                        typeSpeed: 5,
+                        showCursor: false,
+                        startDelay: 200 
+                    });
+                }
+
+                // Lógica para la segunda sección
+                if (entry.target.id === 'seccion-texto2') {
+                    typedDesc2 = new Typed('#texto-maquina-titulo2', {
+                        strings: ['<span class="text-[#00a1f1]">Ubicación</span> y <span class="text-[#00a1f1]">rastreo</span> en tiempo real'],
+                        typeSpeed: 5,
+                        showCursor: false,
+                        startDelay: 200 
+                    });
+                }
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 }); 
 
-    observer.observe(document.getElementById('seccion-texto'));
-    observer.observe(document.getElementById('seccion-texto2'));
+    const seccion1 = document.getElementById('seccion-texto');
+    const seccion2 = document.getElementById('seccion-texto2');
+
+    if (seccion1) observer.observe(seccion1);
+    if (seccion2) observer.observe(seccion2);
 });
 
 //APARECER TEXTO
