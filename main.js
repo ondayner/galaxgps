@@ -214,11 +214,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
 //ENVIAR CORREO 
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evitamos que la página se recargue
+    e.preventDefault();
 
     const btn = this.querySelector('button');
     const nombre = document.getElementById('nombre').value;
@@ -228,8 +227,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     btn.innerText = "Abriendo correo...";
     btn.classList.add('opacity-50', 'cursor-not-allowed');
 
-    const destinatario = "Galaxgpsvzla@gmail.com";
-    const asunto = "Nuevo mensaje de contacto - " + nombre;
+    const destinatario = "aondayner@gmail.com";
+    const asunto = "Contacto de posible cliente";
     const body = `Nombre: ${nombre}%0D%0AEmail: ${correo}%0D%0A%0D%0AMensaje:%0D%0A${mensaje}`;
 
     window.location.href = `mailto:${destinatario}?subject=${encodeURIComponent(asunto)}&body=${body}`;
